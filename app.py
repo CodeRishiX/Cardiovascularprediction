@@ -312,6 +312,6 @@ if submitted:
 st.markdown("---")
 st.markdown("""
     <div style='text-align: center;'>
-        <p>Developed by Group - 23 | |<a href='https://archive.ics.uci.edu/dataset/45/heart+disease'>Data Source</a></p>
+        <p>Developed by Group - 23 </a></p>
     </div>
 """, unsafe_allow_html=True)
