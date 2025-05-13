@@ -1,6 +1,28 @@
+# Core libraries
 streamlit==1.29.0
 pandas==2.0.3
-numpy>=1.26.0
+numpy>=1.26.0,<2.0.0
+
+# Machine Learning
 scikit-learn==1.3.2
 joblib==1.2.0
+
+# Visualization
 matplotlib==3.7.1
+seaborn==0.12.2
+plotly==5.18.0
+
+# Model serialization
+pickle-mixin==1.0.2
+
+# For Streamlit forms and custom widgets (optional)
+streamlit-option-menu==0.3.6
+
+# Environment and compatibility
+python-dotenv==1.0.1
+
+# For web app deployment
+watchdog==3.0.0  # Needed by Streamlit to auto-reload
+
+# Miscellaneous (recommended)
+tqdm==4.66.1  # Progress bars
