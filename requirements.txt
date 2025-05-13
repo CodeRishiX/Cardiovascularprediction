@@ -2,6 +2,7 @@
 streamlit==1.29.0
 pandas==2.0.3
 numpy>=1.26.0,<2.0.0
+setuptools>=67.0.0  # Added for distutils compatibility in Python 3.12
 
 # Machine Learning
 scikit-learn==1.3.2
@@ -26,3 +27,5 @@ watchdog==3.0.0  # Needed by Streamlit to auto-reload
 
 # Miscellaneous (recommended)
 tqdm==4.66.1  # Progress bars
+# For PDF report generation
+reportlab==4.0.9  # Added for downloadable report functionality
