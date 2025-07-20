@@ -1,0 +1,114 @@
+Sample Patient Data for Testing
+Patient 1: High-Risk Elderly Male
+Age: 68
+Resting BP (trestbps): 160 mm Hg
+Cholesterol (chol): 320 mg/dl
+Max Heart Rate (thalach): 115 bpm
+ST Depression (oldpeak): 2.8
+Major Vessels (ca): 3
+Chest Pain Type (cp): 4 (asymptomatic → cp_4.0: 1, cp_2.0: 0)
+Resting ECG (restecg): 2 (LV hypertrophy → restecg_2.0: 1)
+ST Slope (slope): 2 (flat → slope_1.0: 0, slope_2.0: 1, slope_3.0: 0)
+Expected Prediction: Heart Disease Detected (High risk due to age, high BP, high cholesterol, multiple vessels, and asymptomatic chest pain)
+
+Patient 2: Low-Risk Young Female
+Age: 35
+Resting BP: 110 mm Hg
+Cholesterol: 180 mg/dl
+Max Heart Rate: 175 bpm
+ST Depression: 0.0
+Major Vessels: 0
+Chest Pain Type: 1 (typical angina → cp_4.0: 0, cp_2.0: 0)
+Resting ECG: 0 (normal → restecg_2.0: 0)
+ST Slope: 1 (upsloping → slope_1.0: 1, slope_2.0: 0, slope_3.0: 0)
+Expected Prediction: No Heart Disease (Low risk due to young age, normal vitals, no vessels affected)
+
+Patient 3: Moderate-Risk Middle-Aged Male
+Age: 52
+Resting BP: 140 mm Hg
+Cholesterol: 260 mg/dl
+Max Heart Rate: 145 bpm
+ST Depression: 1.5
+Major Vessels: 1
+Chest Pain Type: 2 (atypical angina → cp_4.0: 0, cp_2.0: 1)
+Resting ECG: 1 (ST-T abnormality → restecg_2.0: 0)
+ST Slope: 3 (downsloping → slope_1.0: 0, slope_2.0: 0, slope_3.0: 1)
+Expected Prediction: Heart Disease Detected (Moderate risk due to age, elevated BP, cholesterol, and downsloping ST)
+
+
+Patient 4: High-Risk Middle-Aged Female
+Age: 55
+Resting BP: 155 mm Hg
+Cholesterol: 290 mg/dl
+Max Heart Rate: 130 bpm
+ST Depression: 2.0
+Major Vessels: 2
+Chest Pain Type: 3 (non-anginal → cp_4.0: 0, cp_2.0: 0)
+Resting ECG: 2 (LV hypertrophy → restecg_2.0: 1)
+ST Slope: 2 (flat → slope_1.0: 0, slope_2.0: 1, slope_3.0: 0)
+Expected Prediction: Heart Disease Detected (High risk due to multiple risk factors)
+
+Patient 5: Low-Risk Elderly Male
+Age: 70
+Resting BP: 120 mm Hg
+Cholesterol: 200 mg/dl
+Max Heart Rate: 150 bpm
+ST Depression: 0.5
+Major Vessels: 0
+Chest Pain Type: 1 (typical angina → cp_4.0: 0, cp_2.0: 0)
+Resting ECG: 0 (normal → restecg_2.0: 0)
+ST Slope: 1 (upsloping → slope_1.0: 1, slope_2.0: 0, slope_3.0: 0)
+Expected Prediction: No Heart Disease (Lower risk despite age due to normal vitals)
+
+
+
+
+
+Raw Test Data
+Patient 1: High-Risk Elderly Female
+Age: 65
+Resting BP (trestbps): 165 mm Hg
+Cholesterol (chol): 310 mg/dl
+Max Heart Rate (thalach): 120 bpm
+ST Depression (oldpeak): 2.5
+Major Vessels (ca): 3
+Chest Pain Type (cp): 4 (asymptomatic → cp_4.0: 1, cp_2.0: 0)
+Resting ECG (restecg): 2 (LV hypertrophy → restecg_2.0: 1)
+ST Slope (slope): 3 (downsloping → slope_1.0: 0, slope_2.0: 0, slope_3.0: 1)
+Patient 2: Low-Risk Young Male
+Age: 30
+Resting BP: 105 mm Hg
+Cholesterol: 170 mg/dl
+Max Heart Rate: 180 bpm
+ST Depression: 0.0
+Major Vessels: 0
+Chest Pain Type: 2 (atypical angina → cp_4.0: 0, cp_2.0: 1)
+Resting ECG: 0 (normal → restecg_2.0: 0)
+ST Slope: 1 (upsloping → slope_1.0: 1, slope_2.0: 0, slope_3.0: 0)
+Patient 3: Moderate-Risk Middle-Aged Female
+Age: 48
+Resting BP: 135 mm Hg
+Cholesterol: 270 mg/dl
+Max Heart Rate: 140 bpm
+ST Depression: 1.8
+Major Vessels: 1
+Chest Pain Type: 3 (non-anginal → cp_4.0: 0, cp_2.0: 0)
+Resting ECG: 1 (ST-T abnormality → restecg_2.0: 0)
+ST Slope: 2 (flat → slope_1.0: 0, slope_2.0: 1, slope_3.0: 0)
+Patient 4: Low-Risk Elderly Male
+Age: 72
+Resting BP: 115 mm Hg
+Cholesterol: 190 mg/dl
+Max Heart Rate: 155 bpm
+ST Depression: 0.3
+Major Vessels: 0
+Chest Pain Type: 1 (typical angina → cp_4.0: 0, cp_2.0: 0)
+Resting ECG: 0 (normal → restecg_2.0: 0)
+ST Slope: 1 (upsloping → slope_1.0: 1, slope_2.0: 0, slope_3.0: 0)
+
+
+
+Patient 1: High ca, cp_4.0=1, high oldpeak, restecg_2.0=1 → Probability: ~0.90, Prediction: 1 (Heart Disease)
+Patient 2: High thalach, no ca, cp_2.0=1 → Probability: ~0.15, Prediction: 0 (No Disease)
+Patient 3: Moderate thalach, moderate ca, slope_2.0=1 → Probability: ~0.55, Prediction: 1 (Heart Disease)
+Patient 4: High thalach, low ca, slope_1.0=1 → Probability: ~0.20, Prediction: 0 (No Disease)
